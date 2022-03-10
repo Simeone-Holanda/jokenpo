@@ -45,19 +45,22 @@ Flask 2.0.3
 ## Dicas: 
 - Na hora de cadastrar um jogador ou uma jogada lembre-se de enviar os dados formato JSON os dados.
 
-- Para cadastrar um jogador basta colocar o seguindo json abaixo no body da rota /create-player/, metodo requerido -> [POST]
+- Para cadastrar um jogador basta colocar o seguindo json abaixo no body da rota /create-player/, método requerido -> [POST]
 
     {
         "name": "Simeone"
     }
 
-- Para cadastrar uma nova jogada basta colocar o json abaixo no body da rota /jogada/ , metodo requerido -> [POST]
+- Para cadastrar uma nova jogada basta colocar o json abaixo no body da rota /jogada/ , método requerido -> [POST]
 
     obs - O jogador precisa está cadastrado no sistema, caso contrario recebera um erro. <br>
 {
     "jogador":"Simeone",
     "simbolo":"spock"
 }
+
+- Quando termina todas as entradas execute a rota /finalizar-rodada/, método requerido -> [GET]
+
 
 ### Para mais detalhes acesse os arquivos de rotas e poderá ver as funcionalidades abaixo: 
     - Cadastro de jogador
