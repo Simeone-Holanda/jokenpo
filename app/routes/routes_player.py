@@ -24,7 +24,7 @@ def show_player(id=None):
     return jsonify({'status': '200', 'data': response})
 
 
-@views_player.route('/create-player/', methods=['POST'])
+@views_player.route('/criar-jogador/', methods=['POST'])
 def register_player():
     """ Método responsável por cadastrar um jogador. """
     data_player = request.get_json()
@@ -42,6 +42,9 @@ def register_player():
 
 @views_player.route('/jogador/delete/<jogador_id>', methods=['DELETE'])
 def remove_player(jogador_id):
-    Jogador.query.filter_by(id=jogador_id).delete()
+    jogador = Jogador.query.filter_by(id=jogador_id)
+    if not jogador:
+        jsonify({'response': f'Error player not exist.'})
+    jogador.delete()
     db.session.commit()
     return jsonify({'message': 'No content'})

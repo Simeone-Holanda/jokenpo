@@ -44,7 +44,7 @@ Flask 2.0.3
 ## Dicas: 
 - Na hora de cadastrar um jogador ou uma jogada lembre-se de enviar os dados formato JSON os dados.
 
-- Para cadastrar um jogador basta colocar o seguinte json abaixo no body da rota /create-player/, método requerido -> [POST]
+- Para cadastrar um jogador basta colocar o seguinte json abaixo no body da rota /criar-jogador/, método requerido -> [POST]
 
     {
         "name": "Simeone"
@@ -61,14 +61,15 @@ Flask 2.0.3
 - Quando acabar de colocar todas as entradas execute a rota /finalizar-rodada/ para obter o vecendor da rodada, método requerido -> [GET]
 
 ### Para mais detalhes acesse os arquivos de rotas e poderá ver as funcionalidades abaixo: 
-    - Cadastro de jogador
-    - Consulta de jogador por id
-    - Consulta de todos os jogadores
-    - Remoção de jogador pelo id
-    - Realização de jogada
-    - Finalização da rodada para obter o vencedor
-    - Consulta a todas as jogadas de um jogador
-    - Remoção de uma jogada de um jogador.
+    - Cadastro de jogador -> /criar-jogador/ [POST]
+    - Consulta de jogador por id -> /jogadores/<id> [GET]
+    - Consulta de todos os jogadores -> /jogadores/ [GET]
+    - Remoção de jogador pelo id -> /jogador/delete/<jogador_id> [DELETE]
+    - Realização de jogada -> /jogada/ [POST]
+    - Finalização da rodada para obter o vencedor -> /finalizar-rodada/ [GET]
+    - Consulta a todas as jogadas de um jogador /jogadas/<string:nome_jogador> [GET]
+    - Remoção de uma jogada de um jogador pelo id. -> /jogadas/delete/<jogada_id> [DELETE]
+
 
 
 
