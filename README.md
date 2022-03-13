@@ -42,7 +42,7 @@ Flask 2.0.3
 
 
 ## Dicas: 
-- Na hora de cadastrar um jogador ou uma jogada lembre-se de enviar os dados formato JSON os dados.
+- Na hora de cadastrar um jogador ou uma jogada lembre-se de enviar os dados formato JSON.
 
 - Para cadastrar um jogador basta colocar o seguinte json abaixo no body da rota /criar-jogador/, método requerido -> [POST]
 
